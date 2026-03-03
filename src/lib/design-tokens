@@ -1,0 +1,374 @@
+import type { CSSProperties } from "react"
+
+// ============================================================================
+// COLORS
+// ============================================================================
+
+export const COLORS = {
+  // Primary: Steel Blue Scale (base #5A7085)
+  primary: {
+    50: "#F0F4F7",
+    100: "#E1E9EF",
+    200: "#C3D3DF",
+    500: "#5A7085",
+    600: "#4A5D6E",
+    700: "#3A4A57",
+    800: "#2A3740",
+  },
+
+  // Secondary: Sand Gold Scale (base #B0A07A)
+  secondary: {
+    50: "#FAF8F3",
+    100: "#F5F1E7",
+    400: "#C3B595",
+    700: "#8C7D5A",
+    main: "#B0A07A",
+  },
+
+  // Neutral: Warm Grays
+  neutral: {
+    50: "#FAFAF8",
+    100: "#F5F4F2",
+    200: "#E8E6E3",
+    300: "#D1CEC9",
+    400: "#A8A39C",
+    500: "#78756F",
+    600: "#5C5955",
+    900: "#2A3740",
+  },
+
+  // Success
+  success: {
+    main: "#2D7D46",
+    light: "#E8F5EC",
+    border: "#4CAF72",
+  },
+
+  // Warning
+  warning: {
+    main: "#C48B1A",
+    light: "#FEF6E0",
+    border: "#F59E0B",
+  },
+
+  // Error
+  error: {
+    main: "#C43C3C",
+    light: "#FDE8E8",
+    border: "#EF4444",
+  },
+
+  // Info
+  info: {
+    main: "#2B6CB0",
+    light: "#E3EFF9",
+    border: "#3B82F6",
+  },
+
+  // Background
+  background: {
+    page: "#FAFAF8",
+    card: "#FFFFFF",
+    input: "#FFFFFF",
+    header: "#FFFFFF",
+  },
+
+  // Text
+  text: {
+    heading: "#2A3740",
+    subheading: "#3A4A57",
+    body: "#2A3740",
+    secondary: "#78756F",
+    placeholder: "#A8A39C",
+    disabled: "#D1CEC9",
+    link: "#2B6CB0",
+    linkHover: "#1E4A7A",
+  },
+
+  // Border
+  border: {
+    light: "#E8E6E3",
+    medium: "#D1CEC9",
+    focus: "#5A7085",
+    table: "#E8E6E3",
+  },
+} as const
+
+// ============================================================================
+// TYPOGRAPHY
+// ============================================================================
+
+export const TYPOGRAPHY = {
+  // Font Families
+  fontFamily: {
+    sans: "'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif",
+    serif: "'Libre Baskerville', ui-serif, Georgia, serif",
+    mono: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+  },
+
+  // Font Sizes
+  fontSize: {
+    xs: "12px",
+    sm: "13px",
+    base: "15px",
+    lg: "18px",
+    xl: "22px",
+    "2xl": "28px",
+    "3xl": "36px",
+  },
+
+  // Font Weights
+  fontWeight: {
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+  },
+
+  // Line Heights
+  lineHeight: {
+    tight: 1.15,
+    snug: 1.2,
+    normal: 1.5,
+    relaxed: 1.65,
+  },
+
+  // Letter Spacing
+  letterSpacing: {
+    tight: "-0.03em",
+    snug: "-0.025em",
+    normal: "0",
+    wide: "0.02em",
+    wider: "0.03em",
+    widest: "0.05em",
+  },
+} as const
+
+// ============================================================================
+// SHADOWS
+// ============================================================================
+
+export const SHADOWS = {
+  card: "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+  cardHover: "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+  modal: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+  focus: "0 0 0 3px rgba(90, 112, 133, 0.2)",
+  focusError: "0 0 0 3px rgba(196, 60, 60, 0.2)",
+} as const
+
+// ============================================================================
+// RADII
+// ============================================================================
+
+export const RADII = {
+  sm: "6px",
+  md: "8px",
+  lg: "10px",
+  xl: "12px",
+  full: "9999px",
+} as const
+
+// ============================================================================
+// SPACING
+// ============================================================================
+
+export const SPACING = {
+  1: "4px",
+  2: "8px",
+  3: "12px",
+  4: "16px",
+  5: "20px",
+  6: "24px",
+  7: "28px",
+  8: "32px",
+  9: "36px",
+  10: "40px",
+  11: "44px",
+  12: "48px",
+} as const
+
+// ============================================================================
+// COMPONENT STYLES
+// ============================================================================
+
+export const COMPONENT_STYLES = {
+  // Card
+  card: {
+    backgroundColor: COLORS.background.card,
+    border: `1px solid ${COLORS.border.light}`,
+    borderRadius: RADII.md,
+    padding: SPACING[6],
+    boxShadow: SHADOWS.card,
+  } as CSSProperties,
+
+  // Card Title
+  cardTitle: {
+    fontFamily: TYPOGRAPHY.fontFamily.serif,
+    fontSize: TYPOGRAPHY.fontSize.xl,
+    fontWeight: TYPOGRAPHY.fontWeight.semibold,
+    lineHeight: TYPOGRAPHY.lineHeight.snug,
+    letterSpacing: TYPOGRAPHY.letterSpacing.snug,
+    color: COLORS.text.heading,
+  } as CSSProperties,
+
+  // Page Title
+  pageTitle: {
+    fontFamily: TYPOGRAPHY.fontFamily.serif,
+    fontSize: TYPOGRAPHY.fontSize["3xl"],
+    fontWeight: TYPOGRAPHY.fontWeight.bold,
+    lineHeight: TYPOGRAPHY.lineHeight.tight,
+    letterSpacing: TYPOGRAPHY.letterSpacing.tight,
+    color: COLORS.text.heading,
+  } as CSSProperties,
+
+  // Page Description
+  pageDescription: {
+    fontFamily: TYPOGRAPHY.fontFamily.sans,
+    fontSize: TYPOGRAPHY.fontSize.sm,
+    fontWeight: TYPOGRAPHY.fontWeight.regular,
+    lineHeight: TYPOGRAPHY.lineHeight.normal,
+    color: COLORS.text.secondary,
+  } as CSSProperties,
+
+  // Input Label
+  inputLabel: {
+    fontFamily: TYPOGRAPHY.fontFamily.sans,
+    fontSize: TYPOGRAPHY.fontSize.sm,
+    fontWeight: TYPOGRAPHY.fontWeight.medium,
+    lineHeight: TYPOGRAPHY.lineHeight.normal,
+    letterSpacing: TYPOGRAPHY.letterSpacing.wide,
+    color: COLORS.text.body,
+  } as CSSProperties,
+
+  // Table Header
+  tableHeader: {
+    fontFamily: TYPOGRAPHY.fontFamily.sans,
+    fontSize: TYPOGRAPHY.fontSize.sm,
+    fontWeight: TYPOGRAPHY.fontWeight.semibold,
+    lineHeight: TYPOGRAPHY.lineHeight.normal,
+    letterSpacing: TYPOGRAPHY.letterSpacing.wide,
+    color: COLORS.text.secondary,
+    textTransform: "uppercase" as const,
+  } as CSSProperties,
+
+  // Badge Success
+  badgeSuccess: {
+    backgroundColor: COLORS.success.light,
+    color: COLORS.success.main,
+    border: `1px solid ${COLORS.success.border}`,
+    borderRadius: RADII.sm,
+    padding: `${SPACING[1]} ${SPACING[3]}`,
+    fontFamily: TYPOGRAPHY.fontFamily.sans,
+    fontSize: TYPOGRAPHY.fontSize.xs,
+    fontWeight: TYPOGRAPHY.fontWeight.medium,
+    letterSpacing: TYPOGRAPHY.letterSpacing.wide,
+  } as CSSProperties,
+
+  // Badge Warning
+  badgeWarning: {
+    backgroundColor: COLORS.warning.light,
+    color: COLORS.warning.main,
+    border: `1px solid ${COLORS.warning.border}`,
+    borderRadius: RADII.sm,
+    padding: `${SPACING[1]} ${SPACING[3]}`,
+    fontFamily: TYPOGRAPHY.fontFamily.sans,
+    fontSize: TYPOGRAPHY.fontSize.xs,
+    fontWeight: TYPOGRAPHY.fontWeight.medium,
+    letterSpacing: TYPOGRAPHY.letterSpacing.wide,
+  } as CSSProperties,
+
+  // Badge Error
+  badgeError: {
+    backgroundColor: COLORS.error.light,
+    color: COLORS.error.main,
+    border: `1px solid ${COLORS.error.border}`,
+    borderRadius: RADII.sm,
+    padding: `${SPACING[1]} ${SPACING[3]}`,
+    fontFamily: TYPOGRAPHY.fontFamily.sans,
+    fontSize: TYPOGRAPHY.fontSize.xs,
+    fontWeight: TYPOGRAPHY.fontWeight.medium,
+    letterSpacing: TYPOGRAPHY.letterSpacing.wide,
+  } as CSSProperties,
+
+  // Badge Neutral
+  badgeNeutral: {
+    backgroundColor: COLORS.neutral[100],
+    color: COLORS.neutral[600],
+    border: `1px solid ${COLORS.border.light}`,
+    borderRadius: RADII.sm,
+    padding: `${SPACING[1]} ${SPACING[3]}`,
+    fontFamily: TYPOGRAPHY.fontFamily.sans,
+    fontSize: TYPOGRAPHY.fontSize.xs,
+    fontWeight: TYPOGRAPHY.fontWeight.medium,
+    letterSpacing: TYPOGRAPHY.letterSpacing.wide,
+  } as CSSProperties,
+
+  // Banner Warning
+  bannerWarning: {
+    backgroundColor: COLORS.warning.light,
+    border: `1px solid ${COLORS.warning.border}`,
+    borderRadius: RADII.md,
+    padding: SPACING[4],
+    color: COLORS.warning.main,
+  } as CSSProperties,
+
+  // Button Primary
+  buttonPrimary: {
+    backgroundColor: COLORS.primary[500],
+    color: "#FFFFFF",
+    border: "none",
+    borderRadius: RADII.md,
+    padding: `${SPACING[2]} ${SPACING[4]}`,
+    fontFamily: TYPOGRAPHY.fontFamily.sans,
+    fontSize: TYPOGRAPHY.fontSize.sm,
+    fontWeight: TYPOGRAPHY.fontWeight.medium,
+    letterSpacing: TYPOGRAPHY.letterSpacing.wide,
+    cursor: "pointer",
+    transition: "all 0.2s ease",
+  } as CSSProperties,
+
+  // Button Outline
+  buttonOutline: {
+    backgroundColor: "transparent",
+    color: COLORS.primary[500],
+    border: `1px solid ${COLORS.border.medium}`,
+    borderRadius: RADII.md,
+    padding: `${SPACING[2]} ${SPACING[4]}`,
+    fontFamily: TYPOGRAPHY.fontFamily.sans,
+    fontSize: TYPOGRAPHY.fontSize.sm,
+    fontWeight: TYPOGRAPHY.fontWeight.medium,
+    letterSpacing: TYPOGRAPHY.letterSpacing.wide,
+    cursor: "pointer",
+    transition: "all 0.2s ease",
+  } as CSSProperties,
+
+  // Button Destructive
+  buttonDestructive: {
+    backgroundColor: COLORS.error.main,
+    color: "#FFFFFF",
+    border: "none",
+    borderRadius: RADII.md,
+    padding: `${SPACING[2]} ${SPACING[4]}`,
+    fontFamily: TYPOGRAPHY.fontFamily.sans,
+    fontSize: TYPOGRAPHY.fontSize.sm,
+    fontWeight: TYPOGRAPHY.fontWeight.medium,
+    letterSpacing: TYPOGRAPHY.letterSpacing.wide,
+    cursor: "pointer",
+    transition: "all 0.2s ease",
+  } as CSSProperties,
+} as const
+
+// ============================================================================
+// DEFAULT EXPORT
+// ============================================================================
+
+const designTokens = {
+  COLORS,
+  TYPOGRAPHY,
+  SHADOWS,
+  RADII,
+  SPACING,
+  COMPONENT_STYLES,
+} as const
+
+export default designTokens
